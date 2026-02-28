@@ -1,0 +1,26 @@
+@import './styles/main';
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #888;
+    font-size: 0.9rem;
+    border-top: 1px solid $border-color;
+    margin-top: 2rem;
+}
+
+.loading {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.25rem;
+}

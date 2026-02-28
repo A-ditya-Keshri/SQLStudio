@@ -1,0 +1,44 @@
+@import '../../styles/main';
+
+.navbar {
+    background-color: $primary-color;
+    color: $white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+
+        span {
+            color: $secondary-color;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+        display: none; // Hidden on mobile
+
+        @include respond-to($tablet) {
+            display: flex;
+            gap: 2rem;
+        }
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}

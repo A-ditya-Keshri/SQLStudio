@@ -1,0 +1,112 @@
+@import '../../styles/main';
+
+.sql-studio {
+    padding: 1rem 0;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+
+        h2 {
+            color: $primary-color;
+        }
+    }
+
+    &__layout {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+
+        @include respond-to($laptop) {
+            grid-template-columns: 350px 1fr;
+        }
+    }
+
+    &__panel {
+        background: $white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        border: 1px solid $border-color;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+        &--left {
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+    }
+
+    &__section {
+        margin-bottom: 2rem;
+
+        h3 {
+            margin-bottom: 0.75rem;
+            color: $secondary-color;
+            font-size: 1.1rem;
+        }
+
+        pre {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+    }
+
+    &__editor {
+        border: 1px solid $border-color;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__results {
+        margin-top: 1rem;
+    }
+}
+
+.table-scroll {
+    overflow-x: auto;
+    margin-top: 0.5rem;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+
+        th,
+        td {
+            padding: 0.75rem;
+            border: 1px solid $border-color;
+            text-align: left;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+    }
+}
+
+.error-box {
+    background: #ffe5e5;
+    color: #cc0000;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.hint-box {
+    background: #e7f3ff;
+    border-left: 4px solid $secondary-color;
+    padding: 1rem;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 1rem;
+}
