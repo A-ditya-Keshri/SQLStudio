@@ -32,5 +32,4 @@ CipherSQLStudio is a browser-based SQL learning platform where students can prac
 4. **Response**: Backend returns rows and column names to the client.
 5. **UI Update**: Frontend renders the data in a responsive table.
 
-## Setup Instructions
-Please refer to the `run.md` file in the root directory for detailed setup and execution steps.
+
